@@ -301,3 +301,72 @@ body {
           }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .home.hero {
+        box-sizing: border-box;
+        background: black;
+        width: 100%;
+        position: fixed;
+        z-index: 4;
+        display: block;
+        z-index: 1;
+        top: 0;
+        left:0;
+        right: 0;
+        width: 100%;
+        .uk-container {
+            height: 100vh;
+            display: flex;
+        }
+        h1 {
+            color: #FFFFFF;
+            background: black;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            transition: color 0.6s ease-in, opacity 10ms linear;
+            font-size: 36px;
+            line-height: normal;
+            &.hidden {
+                color: transparent;
+            }
+            &.visible {
+                color: white;
+            }
+        }
+    }
+
+    .home.intro {
+        background: black;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 5;
+        margin-top: 150vh;
+        .uk-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            min-height: 500px;
+    
+            div.text {
+                border-left: 1px solid #BBBBBB;
+                max-width: 1080px;
+    
+                p {
+                    font-style: normal;
+                    width: 90%;
+                    margin: 0 0 50px 50px;
+                    font-size: 24px;
+                    font-weight: 300;
+                    color: #FFFFFF;
+                    &:last-child {
+                        margin-bottom: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
