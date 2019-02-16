@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3719118, 2019-02-13T04:19:11-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AvenirLTPro-Light by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir/pro-35-light/
+ * Copyright: Copyright &#x00A9; 2014 Monotype GmbH. All rights reserved.
+ * Licensed pageviews: 250,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3719118
+ * 
+ * © 2019 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("https://hello.myfonts.net/count/38bfce");
+
+  
+@font-face {font-family: 'AvenirLTPro-Light';src: url('webfonts/38BFCE_0_0.eot');src: url('webfonts/38BFCE_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/38BFCE_0_0.woff2') format('woff2'),url('webfonts/38BFCE_0_0.woff') format('woff'),url('webfonts/38BFCE_0_0.ttf') format('truetype');}
+ 

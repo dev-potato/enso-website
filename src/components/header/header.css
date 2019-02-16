@@ -1,0 +1,56 @@
+header {
+  background: black;
+  position: absolute;
+  z-index: 100000;
+}
+header .header-logo.gatsby-image-wrapper {
+  position: fixed !important;
+  left: 20px;
+  top: 20px;
+  width: 200px;
+  display: block !important;
+}
+@media (min-width: 640px) {
+  header .header-logo.gatsby-image-wrapper {
+    left: 60px;
+    top: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  header .header-logo.gatsby-image-wrapper {
+    left: 100px;
+    top: 50px;
+  }
+}
+header .menu-button {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  padding: 10px 3px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 640px) {
+  header .menu-button {
+    right: 60px;
+    top: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  header .menu-button {
+    right: 100px;
+    top: 50px;
+  }
+}
+header .menu-button span {
+  cursor: pointer;
+  display: block;
+  background: white;
+  width: 24px;
+  height: 2px;
+  margin: 4px auto;
+}

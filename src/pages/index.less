@@ -1,0 +1,303 @@
+@import '../styles/variables.less';
+
+.home {
+    z-index: 2;
+    background: white;
+    position: relative;
+}
+
+body {
+    font-family: 'Avenir', sans-serif;
+    overflow-x: hidden;
+}
+
+.home.hero {
+    box-sizing: border-box;
+    background: black;
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    display: block;
+    z-index: 1;
+    top: 0;
+    left:0;
+    right: 0;
+    width: 100%;
+    .uk-container {
+        height: 100vh;
+        display: flex;
+    }
+    h1 {
+        color: #FFFFFF;
+        background: black;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        transition: color 0.6s ease-in, opacity 10ms linear;
+        font-size: 72px;
+        line-height: normal;
+        &.hidden {
+            color: transparent;
+        }
+        &.visible {
+            color: white;
+        }
+    }
+}
+
+
+.home.intro {
+    background: black;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+    margin-top: 100vh;
+    .uk-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        min-height: 500px;
+
+        div.text {
+            border-left: 1px solid #BBBBBB;
+            max-width: 1080px;
+
+            p {
+                font-style: normal;
+                width: 90%;
+                margin: 0 0 50px 50px;
+                font-size: 36px;
+                font-weight: 300;
+                color: #FFFFFF;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.home.projects {
+    background: black;
+    position: relative;
+    z-index: 5;
+
+    .uk-container-expand {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.home .featured-projects {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 120px;
+    box-sizing: border-box;
+
+    .background {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: red;
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.35s linear;
+        pointer-events: none;
+    }
+
+    li.project-item {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 2;
+        width: calc(~" ( 100% - 240px ) / 3");
+        margin-right: 120px;
+        &.last {
+            margin-right: 0;
+        }
+
+        .inner {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            text-decoration: none !important;
+
+            .content {
+                position: relative;
+                display: block;
+                h2 {
+                    font-family: "times new roman", serif;
+                    max-width: 100px;
+                    font-size: 72px;
+                    font-weight: 100;
+                    color: #FFFFFF !important;
+                    text-decoration: none !important;
+                    position: absolute;
+                    top: 50%;
+                    left: -80px;
+                    opacity: 0;
+                    transform: translate(-20px, -50%);
+                    transition: all 0.35s ease-in;
+                    pointer-events: none;
+                }
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            &:hover h2 {
+                opacity: 1;
+                transform: translate(0px, -50%);
+                transition: all 0.35s ease-out;
+            }
+        }
+
+        &:hover {
+            & + .background {
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+.black-bg {
+    background: black;
+}
+.white-text {
+    color: white;
+}
+.max-width {
+    max-width: 976px;
+}
+
+.viewport-height {
+    height: 100vh;
+    min-height: 400px;
+    max-height: 970px;
+}
+
+.bottom-cta {
+    text-align: center;
+    padding: 15vh 100px;
+    a {
+        font-size: 96px;
+        .title-font;
+        color: black;
+        text-decoration: none !important;
+        font-weight: 100;
+    }
+    span {
+        position: relative;
+        display: block;
+        cursor: pointer;
+      }
+      
+      span:before, span:after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        top: 50%;
+        margin-top: -0.5px;
+        background: black;
+      }
+      
+      span:before {
+        left: -2.5px;
+      }
+      span:after {
+        right: 2.5px;
+        background: black;
+        transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      
+      span:hover:before {
+        background: black;
+        width: 102%;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      
+      span:hover:after {
+        background: transparent;
+        width: 102%;
+        transition: 0s;
+      }
+
+
+}
+
+.custom-paddings {
+    padding: 15vh 0;
+}
+
+.feature-projects-bottom {
+    position: relative;
+    z-index: 5;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50vh;
+    width: 100vw;
+    color: black;
+    font-size: 3rem;
+    .title-font;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+
+        span {
+            position: relative;
+            display: block;
+            cursor: pointer;
+          }
+          
+          span:before, span:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            top: 50%;
+            margin-top: -0.5px;
+            background: black;
+          }
+          
+          span:before {
+            left: -2.5px;
+          }
+          span:after {
+            right: 2.5px;
+            background: black;
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+          }
+          
+          span:hover:before {
+            background: black;
+            width: 102%;
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+          }
+          
+          span:hover:after {
+            background: transparent;
+            width: 102%;
+            transition: 0s;
+          }
+    }
+}
